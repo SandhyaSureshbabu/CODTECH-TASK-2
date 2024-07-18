@@ -1,22 +1,39 @@
 NAME:SANDHYA S
+
 COMPANY:CODTECH IT SOLUTIONS
+
 ID:CT4DS3410
+
 DURATION:JULY TO AUGUST
+
 DOMAIN:DATA SCIENCE
 
 
 
+OVERVIEW:
 
+1. Preprocessing Image Data
+Preprocessing is essential to ensure the images are in a suitable format for training. Steps include resizing, normalization, and converting to tensors.
 
-Load and Preprocess Data:
-CIFAR-10 dataset is loaded and normalized.
+2. Data Augmentation
+Data augmentation helps increase the diversity of the training dataset, improving the model's generalization. Common augmentation techniques include:
 
-Data Augmentation:
-Augmentation techniques like rotation, width/height shift, and horizontal flip are applied.
+Random cropping
+Horizontal flipping
+Rotation
+Color jittering
 
-CNN Architecture:
-A VGG16 pretrained model is used as the base model. It is then extended with additional layers for our specific task.
+3. Designing the CNN Architecture
+A typical CNN architecture includes:
 
-Compile and Train:
-The model is compiled with the Adam optimizer and sparse categorical cross-entropy loss.
-The model is trained using the augmented data.
+Convolutional Layers: Extract features from the input images.
+Activation Functions: Introduce non-linearity (e.g., ReLU).
+Pooling Layers: Downsample feature maps (e.g., MaxPooling).
+Fully Connected Layers: Perform the final classification.
+
+4. Training the Model
+Using a dataset like CIFAR-10 or ImageNet, we train the model using an appropriate optimizer (e.g., Adam) and a loss function (e.g., Cross-Entropy Loss).
+
+5. Transfer Learning
+Utilize pretrained models (e.g., VGG, ResNet) to leverage already learned features, fine-tuning the model on our specific dataset for better performance.
+
